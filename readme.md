@@ -66,6 +66,7 @@ Ensure you have the following installed:
 ### Installation
 
 ### Use this template:
+
 1. Click the green "Use this template" button at the top of this repository
 2. Choose "Create a new repository"
 3. Name your new repository (e.g., `client-website`)
@@ -122,12 +123,40 @@ Update sitemap settings in the eleventyConfig.addPlugin(sitemap) block in .eleve
 
 This project is configured for easy deployment to Netlify. You can customize the deployment settings in netlify.toml.
 
-Deploy to Netlify:
+#### Deploy to Netlify:
 
 Push your repository to a Git provider like GitHub.
 Connect your repository to Netlify.
 Netlify will automatically build and deploy your site on each push.
-Build Locally for Production:
+
+#### Manual Deployment:
+
+A `deploy.sh` script is included for manual deployment to a server. Before using it:
+
+1. Update the script with your server details:
+
+   - Replace `username` with your server username
+   - Replace `your-server-ip` with your server's IP address
+   - Replace `/var/www/yourdomain.com/` with your server's web root directory
+
+2. Make the script executable:
+
+   ```bash
+   chmod +x deploy.sh
+   ```
+
+3. Run the deployment:
+   ```bash
+   ./deploy.sh
+   ```
+
+The script will:
+
+- Build the site using `npm run build`
+- Sync the contents of the `dist/` directory to your server using rsync
+- Delete any files on the server that don't exist in your local build
+
+#### Build Locally for Production:
 
 To generate a production-ready build:
 
