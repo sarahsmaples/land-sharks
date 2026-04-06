@@ -1,12 +1,13 @@
 module.exports = {
-  name: "Client Name",
+  name: "Land Shark Tours",
   address: {
-    city: "City",
-    state: "State",
-    zip: "12345",
+    street: "99 West Cabrillo Blvd",
+    city: "Santa Barbara",
+    state: "CA",
+    zip: "93101",
   },
-  phone: "123-456-7890",
-  domain: "https://example.com",
-  bookingDomain: "example",
-  rgPath: "z-tours-test-company",
+  phone: "805-683-7600",
+  domain: "https://www.landsharktours.com/",
+  bookingDomain: "landsharktours",
+  rgPath: "land-shark-tours",
 };

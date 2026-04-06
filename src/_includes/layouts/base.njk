@@ -6,16 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ description }}">
-    <meta name="keywords" content="">
+    <meta name="keywords" content="{{ keywords }}">
     <link rel="canonical" href="{{ client.domain }}{{ page.url }}">
 
-    <!-- Social Media Display -->
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:site_name" content="{{ client.name }}"/>
     <meta property="og:title" content="{{ title }}"/>
     <meta property="og:description" content="{{ description }}"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="{{ client.domain }}{{ page.url }}"/>
-    <meta property="og:image" content="{{ "/assets/images/og-image.webp" | url }}"/>
-    <meta property="og:image:secure_url" content="{{ "/assets/images/og-image.webp" | url }}"/>
+    <meta property="og:image" content="{{ client.domain }}assets/images/og-image.webp"/>
+    <meta property="og:image:secure_url" content="{{ client.domain }}assets/images/og-image.webp"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="{{ title }}"/>
+    <meta name="twitter:description" content="{{ description }}"/>
+    <meta name="twitter:image" content="{{ client.domain }}assets/images/og-image.webp"/>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/favicons/apple-touch-icon.png" | url }}">
@@ -33,20 +42,42 @@
 
     {% block head %}{% endblock %}
 
-    <title>{{ title }}</title>
+    <title>{{ title }} | {{ client.name }}</title>
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": ["TouristAttraction", "LocalBusiness"],
         "name": "{{ client.name }}",
         "url": "{{ client.domain }}",
-        "logo": "{{ client.domain }}/assets/images/logo.png",
+        "logo": "{{ client.domain }}assets/images/logo.png",
+        "image": "{{ client.domain }}assets/images/og-image.webp",
+        "description": "The only amphibious vehicle tour on the California coast — ride from land straight into the ocean to see dolphins, whales, and Santa Barbara harbor wildlife.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "{{ client.address.street }}",
+          "addressLocality": "{{ client.address.city }}",
+          "addressRegion": "{{ client.address.state }}",
+          "postalCode": "{{ client.address.zip }}",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "34.4133",
+          "longitude": "-119.6850"
+        },
+        "telephone": "{{ client.phone }}",
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "{{ client.phone }}",
           "contactType": "Customer Service"
-        }
+        },
+        "touristType": ["FamilyTourist", "NatureTourist"],
+        "availableLanguage": "English",
+        "currenciesAccepted": "USD",
+        "paymentAccepted": "Cash, Credit Card",
+        "priceRange": "$$",
+        "sameAs": []
       }
     </script>
 

@@ -1,0 +1,57 @@
+---
+title: Public Tours
+description: Join a public Land Shark Tour in Santa Barbara — a 90-minute amphibious adventure through the city and into the Pacific Ocean. View ticket prices, schedule, and tour departure information.
+keywords: Santa Barbara public tours, Land Shark Tours tickets, Santa Barbara tour prices, amphibious tour schedule Santa Barbara, things to do Santa Barbara
+---
+
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+  <section class="py-12 px-4 mx-auto max-w-screen-xl lg:px-6">
+    <div class="max-w-3xl">
+      <h1 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">Public Tours</h1>
+      <p class="mb-10 text-lg font-light text-gray-500 dark:text-gray-400">Voted the best city and harbor tours of Santa Barbara and top 10 cool things to do in California.</p>
+
+      <div class="grid gap-8 mb-10 md:grid-cols-3">
+
+        <!-- Ticket Prices -->
+        <div class="p-6 bg-gray-50 rounded-lg dark:bg-gray-800">
+          <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">Ticket Prices</h2>
+          <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+            <li class="flex justify-between"><span>Adult</span><span class="font-semibold">$45</span></li>
+            <li class="flex justify-between"><span>Children Under 10</span><span class="font-semibold">$30</span></li>
+            <li class="flex justify-between"><span>Children Under 2 (on lap)</span><span class="font-semibold">Free</span></li>
+          </ul>
+        </div>
+
+        <!-- Schedule -->
+        <div class="p-6 bg-gray-50 rounded-lg dark:bg-gray-800">
+          <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">Schedule</h2>
+          <p class="mb-4 text-gray-600 dark:text-gray-400">Click on "View Calendar" to see available tour days and times.</p>
+          <a href="https://book.{{ client.bookingDomain }}.com/{{ client.rgPath }}/reservations/calendar" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            View Calendar
+          </a>
+        </div>
+
+        <!-- Tour Departure -->
+        <div class="p-6 bg-gray-50 rounded-lg dark:bg-gray-800">
+          <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">Tour Departure</h2>
+          <address class="not-italic text-gray-600 dark:text-gray-400">
+            <p>{{ client.address.street }}</p>
+            <p>{{ client.address.city }}, {{ client.address.state }} {{ client.address.zip }}</p>
+          </address>
+        </div>
+
+      </div>
+
+      <p class="mb-10 text-sm text-gray-500 dark:text-gray-400 italic">*All tours are subject to cancellations. Some tour times may not be available. Passenger minimums may apply.</p>
+
+      <div class="space-y-6 text-gray-600 dark:text-gray-400 md:text-lg font-light">
+        <p>Beginning just west of Stearns Wharf, we wind our way through the enchanting streets of Santa Barbara. See the historical landmarks, and visit the numerous attractions. Learn about the city's past, present and future, and explore the alluring beachside city that many of the world's rich and famous call home.</p>
+        <p>The adventure continues as we splash into the blue pacific waters of the Santa Barbara harbor. See luxurious private yachts and fleet of commercial fishing boats. Hear maritime legends of Stearns Wharf and discover the abundant marine mammals and sea life that inhabit our ocean. We often encounter sea lions, seals, dolphins or even whales!</p>
+        <p>The tour route is carefully selected to maximize your tour experience with us. Land and Sea Tours does not accept paid endorsements to mention specific attractions, shops or restaurants, which means we are not forced to drive through insignificant parts of town, waste your tour time sitting in traffic or drive past and recommend shops and restaurants that are not truly the best of Santa Barbara.</p>
+        <p>Land Shark Tours accept cash, Visa, Master Card, and American Express. Please arrive at least 15 minutes prior to departure. Learn more about the <a href="{{ "/vessels/" | url }}" class="text-blue-700 hover:underline dark:text-blue-500">vessel you will be riding in</a> or check out our <a href="{{ "/faq/" | url }}" class="text-blue-700 hover:underline dark:text-blue-500">FAQ page</a>.</p>
+      </div>
+    </div>
+  </section>
+{% endblock %}

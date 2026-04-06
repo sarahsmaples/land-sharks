@@ -1,11 +1,80 @@
 ---
-title: Private Charter Request
+title: Private Charter Tours
+description: Reserve a Land Shark exclusively for your group in Santa Barbara — up to 40 passengers, day or night, with custom routes, sound system, and LED lighting for any occasion.
+keywords: Santa Barbara private charter tour, private amphibious tour, group tours Santa Barbara, corporate tours Santa Barbara, bachelorette tours Santa Barbara, Santa Barbara party bus
 ---
 
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-  <section>
+  <section class="py-12 px-4 mx-auto max-w-screen-xl lg:px-6">
+    <div class="max-w-3xl">
+      <h1 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">Private Charters</h1>
+      <p class="mb-6 text-xl font-light text-gray-500 dark:text-gray-400">Take your party on both land and sea on Santa Barbara's only premium party-bus!</p>
+
+      <div class="space-y-4 mb-10 text-gray-600 dark:text-gray-400 md:text-lg font-light">
+        <p>The Land Sharks can be reserved exclusively for your group of up to 40 passengers for virtually any type of event at almost any time, day or night. Privately reserving a Land Shark allows your group the flexibility to depart from a different location, at a different time than a scheduled public city tour, or even customize a tour route.</p>
+        <p>Each vehicle is equipped with a superior digital sound system and LED lighting. Bring your favorite music and beverages and get ready for a most memorable event!</p>
+      </div>
+
+      <div class="grid gap-6 mb-10 md:grid-cols-2">
+
+        <!-- Private Charter Prices -->
+        <div class="p-6 bg-gray-50 rounded-lg dark:bg-gray-800">
+          <h2 class="mb-1 text-xl font-bold text-gray-900 dark:text-white">Private Charter Prices</h2>
+          <p class="mb-4 text-sm text-gray-500 dark:text-gray-400">Without narration.</p>
+          <ul class="space-y-3 text-gray-600 dark:text-gray-400">
+            <li>
+              <span class="font-semibold text-gray-900 dark:text-white">1.5 Hours</span>
+              <p class="text-sm">$1,300 cash / $1,400 credit or debit</p>
+            </li>
+            <li>
+              <span class="font-semibold text-gray-900 dark:text-white">2 Hours</span>
+              <p class="text-sm">$1,800 cash / $1,900 credit or debit</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Private Tour Prices -->
+        <div class="p-6 bg-gray-50 rounded-lg dark:bg-gray-800">
+          <h2 class="mb-1 text-xl font-bold text-gray-900 dark:text-white">Private Tour Prices</h2>
+          <p class="mb-4 text-sm text-gray-500 dark:text-gray-400">A private version of our regular 90-minute narrated tour with a guide.</p>
+          <ul class="space-y-3 text-gray-600 dark:text-gray-400">
+            <li>
+              <span class="font-semibold text-gray-900 dark:text-white">1.5 Hours</span>
+              <p class="text-sm">$1,500 cash / $1,600 credit or debit</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Deposit -->
+        <div class="p-6 bg-gray-50 rounded-lg dark:bg-gray-800">
+          <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Deposit</h2>
+          <p class="text-gray-600 dark:text-gray-400">$200 cash cleaning/damage deposit required upon arrival.</p>
+        </div>
+
+        <!-- Cancellation Fee -->
+        <div class="p-6 bg-gray-50 rounded-lg dark:bg-gray-800">
+          <h2 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Cancellation Fee</h2>
+          <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+            <li>$300 any time after booking</li>
+            <li>$600 less than 7 days before the booked event</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <p class="mb-8 text-gray-600 dark:text-gray-400 md:text-lg font-light">Our Land and Sea Tours representatives are available to help you design your own unique land and sea adventure and customize a tour or event to meet your specific needs!</p>
+
+      <p class="mb-8 text-gray-600 dark:text-gray-400">For questions, more information, or to book your private party charter, call <a href="tel:{{ client.phone }}" class="text-blue-700 hover:underline dark:text-blue-500">{{ client.phone }}</a> or send an email to <a href="mailto:landandseatours@aol.com" class="text-blue-700 hover:underline dark:text-blue-500">landandseatours@aol.com</a>. Learn more about the <a href="{{ "/vessels/" | url }}" class="text-blue-700 hover:underline dark:text-blue-500">vessel you will be riding in</a> or check out our <a href="{{ "/faq/" | url }}" class="text-blue-700 hover:underline dark:text-blue-500">FAQ page</a>.</p>
+
+      <a href="#contact" class="inline-flex items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-3 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        Request a Charter
+      </a>
+    </div>
+  </section>
+
+  <section id="contact" class="mt-4">
     <iframe src="https://reservationgenie.com/{{ client.rgPath }}/private_charter_request_form" width="100%" height="720" frameborder="0" style="border: none;"></iframe>
   </section>
 {% endblock %}
