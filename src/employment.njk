@@ -7,7 +7,11 @@ keywords: Land Shark Tours jobs, Santa Barbara tour guide jobs, amphibious tour 
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-  <section>
+
+  {% include "components/page-hero.njk" %}
+
+  <section class="bg-sand">
     <iframe src="https://reservationgenie.com/{{ client.rgPath }}/employment_form" width="100%" height="720" frameborder="0" style="border: none;"></iframe>
   </section>
+
 {% endblock %}

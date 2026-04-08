@@ -11,8 +11,11 @@ keywords: Land Shark Tours photos, Santa Barbara tour gallery, amphibious tour p
 {% endblock %}
 
 {% block content %}
-  <section class="py-12 px-4 mx-auto max-w-screen-xl lg:px-6">
-    <h1 class="mb-10 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">Photo Gallery</h1>
+
+  {% include "components/page-hero.njk" %}
+
+  <section class="py-12 lg:py-16">
+    <div class="max-w-screen-xl mx-auto px-4 lg:px-6">
 
     <div class="columns-2 md:columns-3 lg:columns-4 gap-4">
       <a href="{{ "/assets/images/gallery/g1.jpg" | url }}" class="glightbox block mb-4 break-inside-avoid" data-gallery="land-shark-tours">
@@ -81,6 +84,7 @@ keywords: Land Shark Tours photos, Santa Barbara tour gallery, amphibious tour p
       <a href="{{ "/assets/images/gallery/g22.jpg" | url }}" class="glightbox block mb-4 break-inside-avoid" data-gallery="land-shark-tours">
         <img src="{{ "/assets/images/gallery/g22.jpg" | url }}" alt="Land Shark Tours Santa Barbara" class="w-full rounded-lg hover:opacity-90 transition-opacity">
       </a>
+    </div>
     </div>
   </section>
 
