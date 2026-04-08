@@ -49,7 +49,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        heading: ['Fredoka One', 'cursive'],
+        heading: ['Righteous', 'sans-serif'],
         body:    ['Nunito', 'sans-serif'],
       },
     },

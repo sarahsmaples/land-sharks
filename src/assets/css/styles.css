@@ -402,7 +402,7 @@ video {
 }
 
   h1, h2, h3, h4, h5, h6 {
-  font-family: Fredoka One, cursive;
+  font-family: Righteous, sans-serif;
 }
 
 *, ::before, ::after {
@@ -673,7 +673,7 @@ video {
 /* Section headings */
 .section-title {
   margin-bottom: 0.5rem;
-  font-family: Fredoka One, cursive;
+  font-family: Righteous, sans-serif;
   font-size: 1.875rem;
   line-height: 2.25rem;
   --tw-text-opacity: 1;
@@ -1087,7 +1087,7 @@ video {
   font-family: Nunito, sans-serif;
 }
 .font-heading {
-  font-family: Fredoka One, cursive;
+  font-family: Righteous, sans-serif;
 }
 .text-2xl {
   font-size: 1.5rem;
