@@ -570,6 +570,9 @@ video {
 .btn-outline-white:hover {
   background-color: rgb(255 255 255 / 0.1);
 }
+.btn-outline-white {
+    &::after { content: ' →'; }
+  }
 .btn-teal {
   display: inline-flex;
   align-items: center;
@@ -602,6 +605,9 @@ video {
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+.btn-teal {
+    &::after { content: ' →'; }
+  }
 .btn-navy {
   display: inline-flex;
   align-items: center;
@@ -634,6 +640,9 @@ video {
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+.btn-navy {
+    &::after { content: ' →'; }
+  }
 /* Cards */
 .card {
   border-radius: 1rem;
@@ -890,6 +899,7 @@ video {
     .leaf-card-footer {
       font-family: "Google Sans", sans-serif;
       border-radius: 0 0 99px 15px;
+      &::after { content: ' →'; }
     }
   }
 /* Section headings */

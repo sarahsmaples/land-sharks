@@ -65,14 +65,17 @@
 
   .btn-outline-white {
     @apply inline-flex items-center gap-2 border-2 border-white/70 text-white font-bold px-8 py-4 rounded-full text-lg hover:bg-white/10 transition-all;
+    &::after { content: ' →'; }
   }
 
   .btn-teal {
     @apply inline-flex items-center gap-2 bg-teal text-white font-bold px-8 py-4 rounded-full text-lg transition-all shadow hover:bg-teal-600 hover:-translate-y-0.5 hover:shadow-md;
+    &::after { content: ' →'; }
   }
 
   .btn-navy {
     @apply inline-flex items-center gap-2 bg-navy text-white font-bold px-8 py-4 rounded-full text-lg transition-all shadow hover:bg-navy-700 hover:-translate-y-0.5 hover:shadow-md;
+    &::after { content: ' →'; }
   }
 
   /* Cards */
@@ -159,6 +162,7 @@
       @apply block text-center py-4 px-8 bg-navy-900 text-white font-bold uppercase tracking-widest text-sm transition-colors hover:bg-navy-800;
       font-family: "Google Sans", sans-serif;
       border-radius: 0 0 99px 15px;
+      &::after { content: ' →'; }
     }
   }
 
