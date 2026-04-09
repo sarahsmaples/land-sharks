@@ -13,12 +13,10 @@ keywords: Santa Barbara amphibious tours, Land Shark Tours, Santa Barbara whale 
 {% block content %}
 
   <!-- Hero -->
-  <section class="relative bg-navy-900 text-white overflow-hidden min-h-[85vh] flex items-center">
+  <section class="relative bg-cover bg-center text-white overflow-hidden min-h-screen flex items-center" style="background-image: url('/assets/images/hero.jpg')">
+    <div class="absolute inset-0 bg-navy-900/55"></div>
 
-    <!-- Decorative anchor watermark -->
-    <div class="absolute right-0 bottom-0 top-0 hidden lg:flex items-center pr-16 text-[360px] opacity-5 leading-none select-none">⚓</div>
-
-    <div class="relative z-10 max-w-screen-xl mx-auto px-4 lg:px-6 py-24">
+    <div class="relative z-10 w-full px-4 lg:px-16 pt-24 pb-28">
       <div class="max-w-2xl">
         <span class="inline-block bg-teal text-white text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6">Santa Barbara's Original Amphibious Tour</span>
         <h1 class="text-5xl lg:text-7xl font-heading leading-none mb-6">Land. Sea.<br>Adventure.</h1>
@@ -37,35 +35,35 @@ keywords: Santa Barbara amphibious tours, Land Shark Tours, Santa Barbara whale 
     </div>
 
     <!-- Wave into about section -->
-    <svg class="absolute bottom-0 left-0 right-0 w-full" viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="white"/>
+    <svg class="absolute bottom-0 left-0 right-0 w-full block" viewBox="0 0 1440 112" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,56 C360,112 1080,0 1440,56 L1440,112 L0,112 Z" fill="#0AB5B7"/>
     </svg>
 
   </section>
 
   <!-- Highlights strip -->
-  <section class="bg-teal text-white">
+  <section class="bg-teal text-white -mt-1">
     <div class="max-w-screen-xl mx-auto px-4 lg:px-6 py-10">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
         <div>
           <div class="text-4xl mb-2">🌊</div>
-          <div class="font-heading text-xl">90-Minute Tour</div>
-          <div class="text-teal-100 text-sm mt-1">Half land, half sea</div>
+          <div class="font-heading text-2xl">90-Minute Tour</div>
+          <div class="text-teal-100 text-base mt-1">Half land, half sea</div>
         </div>
         <div>
           <div class="text-4xl mb-2">🐬</div>
-          <div class="font-heading text-xl">Wildlife Encounters</div>
-          <div class="text-teal-100 text-sm mt-1">Dolphins, seals &amp; whales</div>
+          <div class="font-heading text-2xl">Wildlife Encounters</div>
+          <div class="text-teal-100 text-base mt-1">Dolphins, seals &amp; whales</div>
         </div>
         <div>
           <div class="text-4xl mb-2">🎉</div>
-          <div class="font-heading text-xl">Fun for All Ages</div>
-          <div class="text-teal-100 text-sm mt-1">Kids under 2 ride free</div>
+          <div class="font-heading text-2xl">Fun for All Ages</div>
+          <div class="text-teal-100 text-base mt-1">Kids under 2 ride free</div>
         </div>
         <div>
           <div class="text-4xl mb-2">🏆</div>
-          <div class="font-heading text-xl">Award Winning</div>
-          <div class="text-teal-100 text-sm mt-1">Top 10 in California</div>
+          <div class="font-heading text-2xl">Award Winning</div>
+          <div class="text-teal-100 text-base mt-1">Top 10 in California</div>
         </div>
       </div>
     </div>
@@ -91,6 +89,152 @@ keywords: Santa Barbara amphibious tours, Land Shark Tours, Santa Barbara whale 
       </div>
     </div>
   </section>
+
+  <!-- Reviews -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <section class="relative bg-cover bg-center bg-no-repeat" style="background-image: url('/assets/images/reviews.png')">
+    <div class="absolute inset-0 bg-navy-900/30"></div>
+    <div class="relative max-w-screen-xl mx-auto px-4 lg:px-6 py-20">
+      <h2 class="section-title text-center text-white mb-2">What Our Passengers Say</h2>
+      <p class="text-center text-teal-300 font-body mb-12">★★★★★ Rated on Google, TripAdvisor &amp; Yelp</p>
+
+      <div class="relative">
+        <!-- Arrows -->
+        <button class="reviews-prev absolute -left-6 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-white/20 border border-white/20 text-white rounded-full w-12 h-12 flex items-center justify-center transition-colors">
+          &#8592;
+        </button>
+        <button class="reviews-next absolute -right-6 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-white/20 border border-white/20 text-white rounded-full w-12 h-12 flex items-center justify-center transition-colors">
+          &#8594;
+        </button>
+
+        <div class="swiper reviews-swiper overflow-hidden">
+          <div class="swiper-wrapper">
+
+            <!-- Google 1 -->
+            <div class="swiper-slide">
+              <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-white h-full flex flex-col">
+                <p class="text-amber-400 text-xl mb-4 text-center">★★★★★</p>
+                <p class="font-body leading-relaxed mb-6">One of the best things to do in Santa Barbara and a DIFFERENT EXPERIENCE. DO NOT MISS IT!! If you are with family and kids, they would love this 100%</p>
+                <div class="border-t border-white/20 pt-4 mt-auto">
+                  <a href="https://www.google.com/maps/place/Land+Shark/@34.4113223,-119.6900536,17z/data=!3m1!4b1!4m6!3m5!1s0x80e9138c781f5553:0x6139bf68b28e2e46!8m2!3d34.4113223!4d-119.6900536!16s%2Fg%2F11bx2ks1xl" target="_blank" rel="noopener noreferrer" class="text-white/60 text-sm hover:text-teal-300 transition-colors">Google Review &nearr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- TripAdvisor 1 -->
+            <div class="swiper-slide">
+              <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-white h-full flex flex-col">
+                <p class="text-amber-400 text-xl mb-4 text-center">★★★★★</p>
+                <p class="font-body leading-relaxed mb-6">After living in the Santa Barbara area for 15 years, I finally took a tour on the Landshark and absolutely loved it! Will recommend it to anyone interested in spending time in Santa Barbara.</p>
+                <div class="border-t border-white/20 pt-4 mt-auto">
+                  <a href="https://www.tripadvisor.com/Attraction_Review-g33045-d1083213-Reviews-Land_and_Sea_Tours_Land_Shark-Santa_Barbara_California.html" target="_blank" rel="noopener noreferrer" class="text-white/60 text-sm hover:text-teal-300 transition-colors">TripAdvisor Review &nearr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Yelp 1 -->
+            <div class="swiper-slide">
+              <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-white h-full flex flex-col">
+                <p class="text-amber-400 text-xl mb-4 text-center">★★★★★</p>
+                <p class="font-body leading-relaxed mb-6">If you're thinking about it JUST DO IT! This was the highlight of our trip, it is well worth the price! This tour is all that it says it is and more! It's an experience you must do. Trust me when I say it is worth it.</p>
+                <div class="border-t border-white/20 pt-4 mt-auto">
+                  <a href="https://www.yelp.com/biz/land-and-sea-shark-tour-santa-barbara" target="_blank" rel="noopener noreferrer" class="text-white/60 text-sm hover:text-teal-300 transition-colors">Yelp Review &nearr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Google 2 -->
+            <div class="swiper-slide">
+              <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-white h-full flex flex-col">
+                <p class="text-amber-400 text-xl mb-4 text-center">★★★★★</p>
+                <p class="font-body leading-relaxed mb-6">This is Must Do activity in Santa Barbara! It's great for all ages. We would highly recommend Land Shark. You won't be disappointed.</p>
+                <div class="border-t border-white/20 pt-4 mt-auto">
+                  <a href="https://www.google.com/maps/place/Land+Shark/@34.4113223,-119.6900536,17z/data=!3m1!4b1!4m6!3m5!1s0x80e9138c781f5553:0x6139bf68b28e2e46!8m2!3d34.4113223!4d-119.6900536!16s%2Fg%2F11bx2ks1xl" target="_blank" rel="noopener noreferrer" class="text-white/60 text-sm hover:text-teal-300 transition-colors">Google Review &nearr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- TripAdvisor 2 -->
+            <div class="swiper-slide">
+              <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-white h-full flex flex-col">
+                <p class="text-amber-400 text-xl mb-4 text-center">★★★★★</p>
+                <p class="font-body leading-relaxed mb-6">This is the best well-rounded tour of Santa Barbara! You will be taken through the town AND out on the Pacific Ocean! When in Santa Barbara, take this tour! Just do it!!</p>
+                <div class="border-t border-white/20 pt-4 mt-auto">
+                  <a href="https://www.tripadvisor.com/Attraction_Review-g33045-d1083213-Reviews-Land_and_Sea_Tours_Land_Shark-Santa_Barbara_California.html" target="_blank" rel="noopener noreferrer" class="text-white/60 text-sm hover:text-teal-300 transition-colors">TripAdvisor Review &nearr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Yelp 2 -->
+            <div class="swiper-slide">
+              <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-white h-full flex flex-col">
+                <p class="text-amber-400 text-xl mb-4 text-center">★★★★★</p>
+                <p class="font-body leading-relaxed mb-6">My family and I had a great time on this tour. We learned so much about Santa Barbara and loved every bit of it. It was fun and relaxing. Highly recommend! It's worth every penny!</p>
+                <div class="border-t border-white/20 pt-4 mt-auto">
+                  <a href="https://www.yelp.com/biz/land-and-sea-shark-tour-santa-barbara" target="_blank" rel="noopener noreferrer" class="text-white/60 text-sm hover:text-teal-300 transition-colors">Yelp Review &nearr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Google 3 -->
+            <div class="swiper-slide">
+              <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-white h-full flex flex-col">
+                <p class="text-amber-400 text-xl mb-4 text-center">★★★★★</p>
+                <p class="font-body leading-relaxed mb-6">We had an amazing experience with Landshark in Santa Barbara! From start to finish, everything was incredibly professional. Highly recommended for anyone visiting Santa Barbara!</p>
+                <div class="border-t border-white/20 pt-4 mt-auto">
+                  <a href="https://www.google.com/maps/place/Land+Shark/@34.4113223,-119.6900536,17z/data=!3m1!4b1!4m6!3m5!1s0x80e9138c781f5553:0x6139bf68b28e2e46!8m2!3d34.4113223!4d-119.6900536!16s%2Fg%2F11bx2ks1xl" target="_blank" rel="noopener noreferrer" class="text-white/60 text-sm hover:text-teal-300 transition-colors">Google Review &nearr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- TripAdvisor 3 -->
+            <div class="swiper-slide">
+              <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-white h-full flex flex-col">
+                <p class="text-amber-400 text-xl mb-4 text-center">★★★★★</p>
+                <p class="font-body leading-relaxed mb-6">Terrific tour! The best of all possible worlds. I have lived in Santa Barbara and still learned many new things on the tour. Would definitely take the tour again.</p>
+                <div class="border-t border-white/20 pt-4 mt-auto">
+                  <a href="https://www.tripadvisor.com/Attraction_Review-g33045-d1083213-Reviews-Land_and_Sea_Tours_Land_Shark-Santa_Barbara_California.html" target="_blank" rel="noopener noreferrer" class="text-white/60 text-sm hover:text-teal-300 transition-colors">TripAdvisor Review &nearr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Yelp 3 -->
+            <div class="swiper-slide">
+              <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-white h-full flex flex-col">
+                <p class="text-amber-400 text-xl mb-4 text-center">★★★★★</p>
+                <p class="font-body leading-relaxed mb-6">We can't stop talking about it. We had a great time. We would (and already have) highly recommend this to anyone — whether visiting the area for the first time or for those who think they know the area well.</p>
+                <div class="border-t border-white/20 pt-4 mt-auto">
+                  <a href="https://www.yelp.com/biz/land-and-sea-shark-tour-santa-barbara" target="_blank" rel="noopener noreferrer" class="text-white/60 text-sm hover:text-teal-300 transition-colors">Yelp Review &nearr;</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    new Swiper('.reviews-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.reviews-next',
+        prevEl: '.reviews-prev',
+      },
+      breakpoints: {
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
+    });
+  </script>
 
   <!-- Contact form -->
   <section id="contact" class="bg-sand">

@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply font-body text-gray-800 bg-white;
+    @apply font-body text-gray-800 bg-white text-lg;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -46,7 +46,7 @@
 
   /* Nav links */
   .nav-link {
-    @apply block px-3 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-lg text-sm font-medium transition-colors;
+    @apply block px-3 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-lg text-base font-medium transition-colors;
   }
 
   /* Section headings */
@@ -56,6 +56,15 @@
 
   .section-subtitle {
     @apply text-lg text-gray-500 font-body font-light mb-8;
+  }
+
+  /* Reviews carousel equal height */
+  .reviews-swiper .swiper-wrapper {
+    align-items: stretch;
+  }
+
+  .reviews-swiper .swiper-slide {
+    height: auto;
   }
 
   /* Wave dividers */

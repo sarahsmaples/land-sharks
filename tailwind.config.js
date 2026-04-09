@@ -50,7 +50,7 @@ module.exports = {
       },
       fontFamily: {
         heading: ['Righteous', 'sans-serif'],
-        body:    ['Nunito', 'sans-serif'],
+        body:    ['DM Sans', 'sans-serif'],
       },
     },
   },
