@@ -46,7 +46,35 @@
 
   /* Nav links */
   .nav-link {
-    @apply block px-3 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-lg text-base font-medium transition-colors;
+    @apply block px-4 py-5 text-white/90 text-base relative overflow-hidden uppercase tracking-wide;
+    font-family: "Google Sans", sans-serif;
+    font-weight: 500;
+    transition: color 0.3s ease;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.2);
+      transition: width 0.3s ease;
+      z-index: 0;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+
+    &:hover {
+      @apply text-white;
+    }
+
+    span, &> * {
+      position: relative;
+      z-index: 1;
+    }
   }
 
   /* Section headings */

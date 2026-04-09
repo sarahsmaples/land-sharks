@@ -16,21 +16,29 @@ keywords: Santa Barbara amphibious tours, Land Shark Tours, Santa Barbara whale 
   <section class="relative bg-cover bg-center text-white overflow-hidden min-h-screen flex items-center" style="background-image: url('{{ "/assets/images/hero.jpg" | url }}')">
     <div class="absolute inset-0 bg-navy-900/55"></div>
 
-    <div class="relative z-10 w-full px-4 lg:px-16 pt-24 pb-28">
-      <div class="max-w-2xl">
-        <span class="inline-block bg-teal text-white text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6">Santa Barbara's Original Amphibious Tour</span>
-        <h1 class="text-5xl lg:text-7xl font-heading leading-none mb-6">Land. Sea.<br>Adventure.</h1>
-        <p class="text-xl text-navy-200 mb-10 max-w-xl leading-relaxed font-body">
-          90 minutes of non-stop fun through Santa Barbara's streets and straight into the Pacific Ocean. Dolphins, sea lions, whales — and the most unique vehicle you'll ever ride.
-        </p>
-        <div class="flex flex-wrap gap-4">
-          <a href="https://book.{{ client.bookingDomain }}.com/{{ client.rgPath }}/reservations/calendar" target="_blank" rel="noopener noreferrer" class="btn-primary">
-            Book Your Tour &rarr;
-          </a>
-          <a href="{{ "/public-tours/" | url }}" class="btn-outline-white">
-            Learn More
-          </a>
+    <div class="relative z-10 w-full px-4 lg:px-16 pt-24 lg:pt-0 pb-28">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+
+        <div class="max-w-2xl lg:flex-1">
+          <span class="inline-block bg-teal text-white text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6">Santa Barbara's Original Amphibious Tour</span>
+          <h1 class="text-5xl lg:text-7xl font-heading leading-none mb-6">Land. Sea.<br>Adventure.</h1>
+          <p class="text-xl text-navy-200 mb-10 max-w-xl leading-relaxed font-body">
+            90 minutes of non-stop fun through Santa Barbara's streets and straight into the Pacific Ocean. Dolphins, sea lions, whales — and the most unique vehicle you'll ever ride.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://book.{{ client.bookingDomain }}.com/{{ client.rgPath }}/reservations/calendar" target="_blank" rel="noopener noreferrer" class="btn-primary">
+              Book Your Tour &rarr;
+            </a>
+            <a href="{{ "/public-tours/" | url }}" class="btn-outline-white">
+              Learn More
+            </a>
+          </div>
         </div>
+
+        <div class="hidden lg:block lg:flex-1 flex justify-end">
+          <img src="{{ "/assets/images/hero-collage.png" | url }}" alt="Land Shark Tours amphibious vehicle in Santa Barbara" class="max-h-[70vh] w-auto object-contain drop-shadow-2xl">
+        </div>
+
       </div>
     </div>
 
