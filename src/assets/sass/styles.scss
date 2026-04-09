@@ -12,6 +12,50 @@
   }
 }
 
+/* Hero animations */
+@keyframes kenBurns {
+  from { transform: scale(1); }
+  to   { transform: scale(1.08); }
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroFadeRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.hero-bg {
+  animation: kenBurns 12s ease-out forwards;
+}
+
+.hero-badge   { animation: heroFadeUp 0.7s ease both; animation-delay: 0.2s; }
+.hero-heading { animation: heroFadeUp 0.7s ease both; animation-delay: 0.4s; }
+.hero-body    { animation: heroFadeUp 0.7s ease both; animation-delay: 0.6s; }
+.hero-buttons { animation: heroFadeUp 0.7s ease both; animation-delay: 0.8s; }
+.hero-collage { animation: heroFadeRight 0.9s ease both; animation-delay: 0.5s; }
+
+/* Scroll animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.fade-up.is-visible,
+.fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @layer components {
 
   /* Buttons */
@@ -24,11 +68,11 @@
   }
 
   .btn-teal {
-    @apply inline-flex items-center gap-2 bg-teal text-white font-bold px-6 py-3 rounded-full transition-all shadow hover:bg-teal-600 hover:-translate-y-0.5 hover:shadow-md;
+    @apply inline-flex items-center gap-2 bg-teal text-white font-bold px-8 py-4 rounded-full text-lg transition-all shadow hover:bg-teal-600 hover:-translate-y-0.5 hover:shadow-md;
   }
 
   .btn-navy {
-    @apply inline-flex items-center gap-2 bg-navy text-white font-bold px-6 py-3 rounded-full transition-all shadow hover:bg-navy-700 hover:-translate-y-0.5 hover:shadow-md;
+    @apply inline-flex items-center gap-2 bg-navy text-white font-bold px-8 py-4 rounded-full text-lg transition-all shadow hover:bg-navy-700 hover:-translate-y-0.5 hover:shadow-md;
   }
 
   /* Cards */
@@ -77,9 +121,24 @@
     }
   }
 
+  /* Stat stamps */
+  .stat-stamp {
+    @apply rounded-2xl px-4 py-3 text-center shadow-lg shrink-0 transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl cursor-default;
+    border: 3px solid rgba(255,255,255,0.25);
+
+    .stat-stamp-number {
+      @apply font-heading text-6xl leading-none;
+    }
+
+    .stat-stamp-label {
+      @apply text-sm font-bold uppercase tracking-widest mt-1 opacity-90;
+      font-family: "Google Sans", sans-serif;
+    }
+  }
+
   /* Leaf cards */
   .leaf-card {
-    @apply flex flex-col text-white w-full max-w-sm overflow-hidden;
+    @apply flex flex-col text-white w-full max-w-sm overflow-hidden transition-transform duration-300 hover:-translate-y-3 hover:shadow-2xl;
     border-radius: 99px 15px 99px 15px;
 
     .leaf-card-image {

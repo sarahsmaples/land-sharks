@@ -1,3 +1,24 @@
+// Scroll-triggered fade-in animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.fade-up, .fade-in').forEach(el => observer.observe(el));
+
+// Stagger children inside .stagger-children
+document.querySelectorAll('.stagger-children').forEach(parent => {
+  [...parent.children].forEach((child, i) => {
+    child.classList.add('fade-up');
+    child.style.transitionDelay = `${i * 100}ms`;
+    observer.observe(child);
+  });
+});
+
 // Mobile nav toggle with unfurl animation
 document.querySelectorAll('[data-collapse-toggle]').forEach(button => {
   const target = document.getElementById(button.getAttribute('data-collapse-toggle'));
