@@ -1,10 +1,11 @@
-<footer class="bg-navy-900 text-white mt-0">
+<footer class="relative z-10 text-white -mt-10">
 
-  <!-- Wave top -->
-  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="block w-full -mb-1">
-    <path d="M0,30 C360,60 1080,0 1440,30 L1440,0 L0,0 Z" fill="#1d4ed8"/>
+  <!-- Wave overlaps whatever section is above -->
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="block w-full">
+    <path d="M0,30 C360,0 1080,60 1440,30 L1440,60 L0,60 Z" fill="#071540"/>
   </svg>
 
+  <div class="bg-navy-900">
   <div class="max-w-screen-xl mx-auto px-4 py-12 lg:px-6">
     <div class="grid md:grid-cols-3 gap-10 mb-10">
 
@@ -53,6 +54,7 @@
       <span>&copy; {{ global.currentYear }} {{ client.name }}. All Rights Reserved.</span>
       <span>Website designed and hosted by <a href="https://reservationgenie.com/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Reservation Genie</a></span>
     </div>
+  </div>
   </div>
 
 </footer>

@@ -1,3 +1,25 @@
+// FAQ Accordion
+document.querySelectorAll('.accordion-trigger').forEach(trigger => {
+  trigger.addEventListener('click', () => {
+    const item = trigger.closest('.accordion-item');
+    const answer = item.querySelector('.accordion-answer');
+    const chevron = trigger.querySelector('.accordion-chevron');
+    const isOpen = answer.style.maxHeight !== '0px' && answer.style.maxHeight !== '';
+
+    // Close all others
+    document.querySelectorAll('.accordion-item').forEach(other => {
+      other.querySelector('.accordion-answer').style.maxHeight = '0';
+      other.querySelector('.accordion-chevron').style.transform = '';
+    });
+
+    // Toggle clicked
+    if (!isOpen) {
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      chevron.style.transform = 'rotate(180deg)';
+    }
+  });
+});
+
 // Scroll-triggered fade-in animations
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {

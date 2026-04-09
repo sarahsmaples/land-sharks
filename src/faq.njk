@@ -1,5 +1,6 @@
 ---
 title: Frequently Asked Questions
+badge: FAQ
 description: Got questions about Land Shark Tours in Santa Barbara? Find answers about tour length, tickets, accessibility, parking, weather cancellations, and more.
 keywords: Land Shark Tours FAQ, Santa Barbara amphibious tour questions, Land Shark Tours tickets, Santa Barbara tour accessibility, public tour questions Santa Barbara
 ---
@@ -10,110 +11,99 @@ keywords: Land Shark Tours FAQ, Santa Barbara amphibious tour questions, Land Sh
 
   {% include "components/page-hero.njk" %}
 
-  <section class="py-12 lg:py-16">
+  <section class="py-12 lg:py-16 bg-teal-50 -mt-2 border-y border-teal-100">
     <div class="max-w-screen-xl mx-auto px-4 lg:px-6">
-      <p class="text-teal font-semibold text-lg mb-10">For Public Tours</p>
+      <div class="flex flex-col lg:flex-row gap-10 items-start">
 
-      <div class="max-w-3xl divide-y divide-gray-100">
+        <!-- Left sidebar: leaf cards -->
+        <div class="hidden lg:flex flex-col gap-5 w-96 shrink-0">
 
-        <div class="py-6">
-          <h2 class="font-heading text-xl text-navy mb-2">How long is the tour?</h2>
-          <p class="text-gray-600">Approximately 90 minutes, half on land, half at sea.</p>
+          <!-- Small squat card 1 -->
+          <a href="{{ "/public-tours/" | url }}" class="group flex overflow-hidden text-white bg-teal relative transition-all min-h-[160px]" style="border-radius: 25px 3px 99px 3px;">
+            <div class="shrink-0 w-40 overflow-hidden">
+              <img src="{{ "/assets/images/public_tours.jpg" | url }}" alt="" class="w-full h-full object-cover">
+            </div>
+            <div class="px-5 py-5">
+              <h3 class="font-heading text-xl mb-2">Book a Tour</h3>
+              <p class="text-sm leading-relaxed opacity-90">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="absolute inset-0 bg-navy-900 flex items-center justify-center -translate-x-full group-hover:translate-x-0 transition-transform duration-300">
+              <span class="font-heading text-2xl text-white">Book Now &rarr;</span>
+            </div>
+          </a>
+
+          <!-- Small squat card 2 -->
+          <a href="{{ "/charter/" | url }}" class="group flex overflow-hidden text-white bg-coral relative transition-all min-h-[160px]" style="border-radius: 25px 3px 99px 3px;">
+            <div class="shrink-0 w-40 overflow-hidden">
+              <img src="{{ "/assets/images/public_tours.jpg" | url }}" alt="" class="w-full h-full object-cover">
+            </div>
+            <div class="px-5 py-5">
+              <h3 class="font-heading text-xl mb-2">Private Charter</h3>
+              <p class="text-sm leading-relaxed opacity-90">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="absolute inset-0 bg-navy-900 flex items-center justify-center -translate-x-full group-hover:translate-x-0 transition-transform duration-300">
+              <span class="font-heading text-2xl text-white">Learn More &rarr;</span>
+            </div>
+          </a>
+
+          <!-- Large tall card -->
+          <a href="#contact" class="group relative overflow-hidden text-white flex flex-col justify-center min-h-[600px]" style="border-radius: 99px 5px 99px 5px;">
+            <img src="{{ "/assets/images/buoy-tall.png" | url }}" alt="" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-navy-900/50 group-hover:bg-navy-900/65 transition-colors duration-300"></div>
+            <div class="relative z-10 px-8 py-10 text-center">
+              <p class="font-heading text-3xl mb-3 leading-tight">Have more questions?</p>
+              <p class="text-white/80 text-base mb-6">We're happy to help — get in touch with our team.</p>
+              <span class="inline-block bg-coral text-white font-bold uppercase tracking-widest text-sm px-6 py-3 transition-colors group-hover:bg-coral-600" style="border-radius: 99px 5px 99px 5px;">Get in Touch &rarr;</span>
+            </div>
+          </a>
+
         </div>
 
-        <div class="py-6">
-          <h2 class="font-heading text-xl text-navy mb-2">Do we have to stop and wait for people to get on and off during the tour?</h2>
-          <p class="text-gray-600">No, tours are nonstop fun!</p>
-        </div>
+        <!-- Right: FAQ content -->
+        <div class="flex-1">
+          <div class="divide-y divide-gray-100">
 
-        <div class="py-6">
-          <h2 class="font-heading text-xl text-navy mb-2">Is there a guide on board?</h2>
-          <p class="text-gray-600">Yes, every public tour is narrated with an amazing award winning tour guide.</p>
-        </div>
+            {% set faqs = [
+              { q: "How long is the tour?", a: "Approximately 90 minutes, half on land, half at sea." },
+              { q: "Do we have to stop and wait for people to get on and off during the tour?", a: "No, tours are nonstop fun!" },
+              { q: "Is there a guide on board?", a: "Yes, every public tour is narrated with an amazing award winning tour guide." },
+              { q: "Are there restrooms on board?", a: "No, restrooms are available at the departure and return location before and after every tour." },
+              { q: "Are babies free?", a: "Yes, there is no charge for children under the age of 2 if they are seated in your lap." },
+              { q: "Is there stroller or wheelchair storage?", a: "Yes, the crew may bring it on board or lock and store it at the departure location." },
+              { q: "Where do I get tickets?", a: "Tickets can be purchased online or there are a limited number of non-advance seats available for purchase as you board — first come, first serve. Cash and credit cards are accepted." },
+              { q: "Can I make a reservation?", a: 'Yes, tour tickets can be purchased online. Advance ticket inquiries can be made via email to <a href="mailto:LandAndSeaTours@aol.com" class="text-teal font-semibold hover:underline">LandAndSeaTours@aol.com</a>.' },
+              { q: "Can we bring food or drinks?", a: "Food and alcoholic beverages are not permitted on public tours." },
+              { q: "How early should I arrive?", a: "At least 15 minutes prior to departure. Allow more time for large groups and during holidays." },
+              { q: "What should I wear?", a: "Bring a jacket or sweatshirt — it may be cooler while at sea." },
+              { q: "Do the tours run in bad weather?", a: "The captain may cancel tours at any time if hazardous conditions are present." },
+              { q: "Is it easy to get on board?", a: "Yes, there are seven steps with handrails on either side. Crewmembers are able to assist all passengers during boarding and disembarking." },
+              { q: "Will I get seasick?", a: "No." },
+              { q: "How many seats are available on each tour?", a: "40 people." },
+              { q: "Is there parking nearby?", a: "Yes, street parking on Cabrillo Blvd and Chapala St., and on Stearns Wharf." },
+              { q: "Are there discounts?", a: "Discounts are not available." },
+              { q: "Can I book a private tour?", a: 'Yes, please see our <a href="/charter/" class="text-teal font-semibold hover:underline">private charter page</a> for more information.' },
+              { q: "Are gift certificates available?", a: 'Yes, gift certificates can be purchased over the phone or on board. You can also <a href="/gift-cards/" class="text-teal font-semibold hover:underline">purchase gift cards online</a>.' },
+              { q: "Can we feed the sharks?", a: "Yes, only on land at the end of the tour." }
+            ] %}
 
-        <div class="py-6">
-          <h2 class="font-heading text-xl text-navy mb-2">Are there restrooms on board?</h2>
-          <p class="text-gray-600">No, restrooms are available at the departure and return location before and after every tour.</p>
-        </div>
+            {% for item in faqs %}
+            <div class="accordion-item">
+              <button class="accordion-trigger w-full text-left py-5 px-3 flex items-center justify-between gap-4 rounded-lg hover:bg-teal-50 transition-colors duration-200">
+                <span class="flex items-center gap-3">
+                  <span class="flex items-center justify-center w-8 h-8 rounded-full bg-teal shrink-0">
+                    <img src="{{ "/assets/images/anchor-no-words.png" | url }}" alt="" class="w-4 h-4 object-contain">
+                  </span>
+                  <span class="font-heading text-xl text-navy">{{ item.q }}</span>
+                </span>
+                <svg class="accordion-chevron w-5 h-5 text-teal shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="accordion-answer overflow-hidden" style="max-height: 0; transition: max-height 0.35s ease;">
+                <p class="text-gray-600 pb-5 pl-9">{{ item.a | safe }}</p>
+              </div>
+            </div>
+            {% endfor %}
 
-        <div class="py-6">
-          <h2 class="font-heading text-xl text-navy mb-2">Are babies free?</h2>
-          <p class="text-gray-600">Yes, there is no charge for children under the age of 2 if they are seated in your lap.</p>
-        </div>
-
-        <div class="py-6">
-          <h2 class="font-heading text-xl text-navy mb-2">Is there stroller or wheelchair storage?</h2>
-          <p class="text-gray-600">Yes, the crew may bring it on board or lock and store it at the departure location.</p>
-        </div>
-
-        <div class="py-6">
-          <h2 class="font-heading text-xl text-navy mb-2">Where do I get tickets?</h2>
-          <p class="text-gray-600">Tickets can be purchased online or there are a limited number of non-advance seats available for purchase as you board — first come, first serve. Cash and credit cards are accepted.</p>
-        </div>
-
-        <div class="py-6">
-          <h2 class="font-heading text-xl text-navy mb-2">Can I make a reservation?</h2>
-          <p class="text-gray-600">Yes, tour tickets can be purchased online. Advance ticket inquiries can be made via email to <a href="mailto:LandAndSeaTours@aol.com" class="text-teal font-semibold hover:underline">LandAndSeaTours@aol.com</a>.</p>
-        </div>
-
-        <div class="py-6">
-          <h2 class="font-heading text-xl text-navy mb-2">Can we bring food or drinks?</h2>
-          <p class="text-gray-600">Food and alcoholic beverages are not permitted on public tours.</p>
-        </div>
-
-        <div class="py-6">
-          <h2 class="font-heading text-xl text-navy mb-2">How early should I arrive?</h2>
-          <p class="text-gray-600">At least 15 minutes prior to departure. Allow more time for large groups and during holidays.</p>
-        </div>
-
-        <div class="py-6">
-          <h2 class="font-heading text-xl text-navy mb-2">What should I wear?</h2>
-          <p class="text-gray-600">Bring a jacket or sweatshirt — it may be cooler while at sea.</p>
-        </div>
-
-        <div class="py-6">
-          <h2 class="font-heading text-xl text-navy mb-2">Do the tours run in bad weather?</h2>
-          <p class="text-gray-600">The captain may cancel tours at any time if hazardous conditions are present.</p>
-        </div>
-
-        <div class="py-6">
-          <h2 class="font-heading text-xl text-navy mb-2">Is it easy to get on board?</h2>
-          <p class="text-gray-600">Yes, there are seven steps with handrails on either side. Crewmembers are able to assist all passengers during boarding and disembarking.</p>
-        </div>
-
-        <div class="py-6">
-          <h2 class="font-heading text-xl text-navy mb-2">Will I get seasick?</h2>
-          <p class="text-gray-600">No.</p>
-        </div>
-
-        <div class="py-6">
-          <h2 class="font-heading text-xl text-navy mb-2">How many seats are available on each tour?</h2>
-          <p class="text-gray-600">40 people.</p>
-        </div>
-
-        <div class="py-6">
-          <h2 class="font-heading text-xl text-navy mb-2">Is there parking nearby?</h2>
-          <p class="text-gray-600">Yes, street parking on Cabrillo Blvd and Chapala St., and on Stearns Wharf.</p>
-        </div>
-
-        <div class="py-6">
-          <h2 class="font-heading text-xl text-navy mb-2">Are there discounts?</h2>
-          <p class="text-gray-600">Discounts are not available.</p>
-        </div>
-
-        <div class="py-6">
-          <h2 class="font-heading text-xl text-navy mb-2">Can I book a private tour?</h2>
-          <p class="text-gray-600">Yes, please see our <a href="{{ "/charter/" | url }}" class="text-teal font-semibold hover:underline">private charter page</a> for more information.</p>
-        </div>
-
-        <div class="py-6">
-          <h2 class="font-heading text-xl text-navy mb-2">Are gift certificates available?</h2>
-          <p class="text-gray-600">Yes, gift certificates can be purchased over the phone or on board. You can also <a href="{{ "/gift-cards/" | url }}" class="text-teal font-semibold hover:underline">purchase gift cards online</a>.</p>
-        </div>
-
-        <div class="py-6">
-          <h2 class="font-heading text-xl text-navy mb-2">Can we feed the sharks?</h2>
-          <p class="text-gray-600">Yes, only on land at the end of the tour.</p>
+          </div>
         </div>
 
       </div>

@@ -126,15 +126,15 @@
 
   /* Stat stamps */
   .stat-stamp {
-    @apply rounded-2xl px-4 py-3 text-center shadow-lg shrink-0 transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl cursor-default;
+    @apply rounded-2xl px-3 py-2 md:px-4 md:py-3 text-center shadow-lg shrink-0 cursor-default flex-1 md:flex-none;
     border: 3px solid rgba(255,255,255,0.25);
 
     .stat-stamp-number {
-      @apply font-heading text-6xl leading-none;
+      @apply font-heading leading-none text-4xl md:text-6xl;
     }
 
     .stat-stamp-label {
-      @apply text-sm font-bold uppercase tracking-widest mt-1 opacity-90;
+      @apply font-bold uppercase tracking-wide mt-1 opacity-90 text-[10px] md:text-sm;
       font-family: "Google Sans", sans-serif;
     }
   }
@@ -164,6 +164,11 @@
       border-radius: 0 0 99px 15px;
       &::after { content: ' →'; }
     }
+  }
+
+  /* FAQ accordion */
+  .accordion-item:nth-child(even) {
+    background-color: rgba(10, 181, 183, 0.04);
   }
 
   /* Section headings */
