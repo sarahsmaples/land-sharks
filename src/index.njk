@@ -13,7 +13,7 @@ keywords: Santa Barbara amphibious tours, Land Shark Tours, Santa Barbara whale 
 {% block content %}
 
   <!-- Hero -->
-  <section class="relative bg-cover bg-center text-white overflow-hidden min-h-screen flex items-center" style="background-image: url('/assets/images/hero.jpg')">
+  <section class="relative bg-cover bg-center text-white overflow-hidden min-h-screen flex items-center" style="background-image: url('{{ "/assets/images/hero.jpg" | url }}')">
     <div class="absolute inset-0 bg-navy-900/55"></div>
 
     <div class="relative z-10 w-full px-4 lg:px-16 pt-24 pb-28">
@@ -43,7 +43,7 @@ keywords: Santa Barbara amphibious tours, Land Shark Tours, Santa Barbara whale 
 
   <!-- Highlights strip -->
   <section class="bg-teal text-white -mt-1">
-    <div class="max-w-screen-xl mx-auto px-4 lg:px-6 py-10">
+    <div class="max-w-screen-xl mx-auto px-4 lg:px-6 pb-10">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
         <div>
           <div class="text-4xl mb-2">🌊</div>
@@ -92,7 +92,7 @@ keywords: Santa Barbara amphibious tours, Land Shark Tours, Santa Barbara whale 
 
   <!-- Reviews -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <section class="relative bg-cover bg-center bg-no-repeat" style="background-image: url('/assets/images/reviews.png')">
+  <section class="relative bg-cover bg-center bg-no-repeat" style="background-image: url('{{ "/assets/images/reviews.png" | url }}')">
     <div class="absolute inset-0 bg-navy-900/30"></div>
     <div class="relative max-w-screen-xl mx-auto px-4 lg:px-6 py-20">
       <h2 class="section-title text-center text-white mb-2">What Our Passengers Say</h2>
