@@ -49,30 +49,47 @@ keywords: Santa Barbara amphibious tours, Land Shark Tours, Santa Barbara whale 
 
   </section>
 
-  <!-- Highlights strip -->
-  <section class="bg-teal text-white -mt-1">
-    <div class="max-w-screen-xl mx-auto px-4 lg:px-6 pb-10">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <div>
-          <div class="text-4xl mb-2">🌊</div>
-          <div class="font-heading text-2xl">90-Minute Tour</div>
-          <div class="text-teal-100 text-base mt-1">Half land, half sea</div>
+  <!-- Feature Cards -->
+  <section class="bg-teal text-white -mt-1 py-16">
+    <div class="max-w-screen-xl mx-auto px-4 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+
+        <!-- Card 1 -->
+        <div class="leaf-card bg-coral">
+          <div class="leaf-card-image">
+            <img src="{{ "/assets/images/public_tours.jpg" | url }}" alt="Public Tours" class="w-full h-full object-cover">
+          </div>
+          <div class="leaf-card-body">
+            <h3 class="font-heading text-2xl mb-3">Public Tours</h3>
+            <p class="text-base leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <a href="{{ "/public-tours/" | url }}" class="leaf-card-footer">Book a Tour</a>
         </div>
-        <div>
-          <div class="text-4xl mb-2">🐬</div>
-          <div class="font-heading text-2xl">Wildlife Encounters</div>
-          <div class="text-teal-100 text-base mt-1">Dolphins, seals &amp; whales</div>
+
+        <!-- Card 2 -->
+        <div class="leaf-card bg-teal-700">
+          <div class="leaf-card-image">
+            <img src="{{ "/assets/images/public_tours.jpg" | url }}" alt="Private Charter" class="w-full h-full object-cover">
+          </div>
+          <div class="leaf-card-body">
+            <h3 class="font-heading text-2xl mb-3">Private Charter</h3>
+            <p class="text-base leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <a href="{{ "/charter/" | url }}" class="leaf-card-footer">Learn More</a>
         </div>
-        <div>
-          <div class="text-4xl mb-2">🎉</div>
-          <div class="font-heading text-2xl">Fun for All Ages</div>
-          <div class="text-teal-100 text-base mt-1">Kids under 2 ride free</div>
+
+        <!-- Card 3 -->
+        <div class="leaf-card bg-navy">
+          <div class="leaf-card-image">
+            <img src="{{ "/assets/images/public_tours.jpg" | url }}" alt="Gift Cards" class="w-full h-full object-cover">
+          </div>
+          <div class="leaf-card-body">
+            <h3 class="font-heading text-2xl mb-3">Gift Cards</h3>
+            <p class="text-base leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <a href="{{ "/gift-cards/" | url }}" class="leaf-card-footer">Buy a Gift Card</a>
         </div>
-        <div>
-          <div class="text-4xl mb-2">🏆</div>
-          <div class="font-heading text-2xl">Award Winning</div>
-          <div class="text-teal-100 text-base mt-1">Top 10 in California</div>
-        </div>
+
       </div>
     </div>
   </section>

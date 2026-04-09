@@ -695,6 +695,118 @@ video {
       z-index: 1;
     }
 }
+/* Leaf cards */
+.leaf-card {
+  display: flex;
+  width: 100%;
+  max-width: 24rem;
+  flex-direction: column;
+  overflow: hidden;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+    border-radius: 99px 15px 99px 15px;
+
+    .leaf-card-image {
+    width: 100%;
+  }
+
+    .leaf-card-image {
+    overflow: hidden;
+  }
+
+    .leaf-card-image {
+      height: 260px;
+      border-radius: 99px 15px 0 0;
+
+      img {
+      height: 100%;
+    }
+
+      img {
+      width: 100%;
+    }
+
+      img {
+      -o-object-fit: cover;
+         object-fit: cover;
+    }
+    }
+
+    .leaf-card-body {
+    flex: 1 1 0%;
+  }
+
+    .leaf-card-body {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+    .leaf-card-body {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+    .leaf-card-footer {
+    display: block;
+  }
+
+    .leaf-card-footer {
+    --tw-bg-opacity: 1;
+    background-color: rgb(7 21 64 / var(--tw-bg-opacity));
+  }
+
+    .leaf-card-footer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+    .leaf-card-footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+    .leaf-card-footer {
+    text-align: center;
+  }
+
+    .leaf-card-footer {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+    .leaf-card-footer {
+    font-weight: 700;
+  }
+
+    .leaf-card-footer {
+    text-transform: uppercase;
+  }
+
+    .leaf-card-footer {
+    letter-spacing: 0.1em;
+  }
+
+    .leaf-card-footer {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+    .leaf-card-footer {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+
+    .leaf-card-footer:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(14 38 96 / var(--tw-bg-opacity));
+  }
+
+    .leaf-card-footer {
+      font-family: "Google Sans", sans-serif;
+      border-radius: 0 0 99px 15px;
+    }
+}
 /* Section headings */
 .section-title {
   margin-bottom: 0.5rem;
@@ -831,6 +943,9 @@ video {
 .mb-8 {
   margin-bottom: 2rem;
 }
+.mr-4 {
+  margin-right: 1rem;
+}
 .mt-0 {
   margin-top: 0px;
 }
@@ -950,6 +1065,9 @@ video {
   -moz-column-break-inside: avoid;
        break-inside: avoid;
 }
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -974,6 +1092,9 @@ video {
 .justify-between {
   justify-content: space-between;
 }
+.justify-items-center {
+  justify-items: center;
+}
 .gap-10 {
   gap: 2.5rem;
 }
@@ -991,6 +1112,9 @@ video {
 }
 .gap-6 {
   gap: 1.5rem;
+}
+.gap-8 {
+  gap: 2rem;
 }
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
@@ -1025,6 +1149,9 @@ video {
 .divide-gray-100 > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-divide-opacity));
+}
+.self-center {
+  align-self: center;
 }
 .overflow-hidden {
   overflow: hidden;
@@ -1108,6 +1235,10 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(254 240 236 / var(--tw-bg-opacity));
 }
+.bg-navy {
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 38 96 / var(--tw-bg-opacity));
+}
 .bg-navy-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(238 242 250 / var(--tw-bg-opacity));
@@ -1134,6 +1265,10 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(224 248 248 / var(--tw-bg-opacity));
 }
+.bg-teal-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(8 159 161 / var(--tw-bg-opacity));
+}
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1156,6 +1291,10 @@ video {
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
+}
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .p-2 {
   padding: 0.5rem;
@@ -1208,9 +1347,6 @@ video {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-}
-.pb-10 {
-  padding-bottom: 2.5rem;
 }
 .pb-28 {
   padding-bottom: 7rem;
@@ -1343,10 +1479,6 @@ video {
 .text-teal {
   --tw-text-opacity: 1;
   color: rgb(10 181 183 / var(--tw-text-opacity));
-}
-.text-teal-100 {
-  --tw-text-opacity: 1;
-  color: rgb(179 237 238 / var(--tw-text-opacity));
 }
 .text-teal-300 {
   --tw-text-opacity: 1;
@@ -1545,6 +1677,11 @@ video {
   .lg\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .lg\:py-16 {

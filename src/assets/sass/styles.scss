@@ -77,6 +77,32 @@
     }
   }
 
+  /* Leaf cards */
+  .leaf-card {
+    @apply flex flex-col text-white w-full max-w-sm overflow-hidden;
+    border-radius: 99px 15px 99px 15px;
+
+    .leaf-card-image {
+      @apply w-full overflow-hidden;
+      height: 260px;
+      border-radius: 99px 15px 0 0;
+
+      img {
+        @apply w-full h-full object-cover;
+      }
+    }
+
+    .leaf-card-body {
+      @apply flex-1 px-8 py-6;
+    }
+
+    .leaf-card-footer {
+      @apply block text-center py-4 px-8 bg-navy-900 text-white font-bold uppercase tracking-widest text-sm transition-colors hover:bg-navy-800;
+      font-family: "Google Sans", sans-serif;
+      border-radius: 0 0 99px 15px;
+    }
+  }
+
   /* Section headings */
   .section-title {
     @apply text-3xl lg:text-4xl font-heading text-navy mb-2;
