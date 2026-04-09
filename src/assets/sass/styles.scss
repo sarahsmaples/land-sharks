@@ -105,7 +105,7 @@
       left: 0;
       width: 0;
       height: 100%;
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 1);
       transition: width 0.3s ease;
       z-index: 0;
     }
@@ -115,7 +115,7 @@
     }
 
     &:hover {
-      @apply text-white;
+      @apply text-navy;
     }
 
     span, &> * {

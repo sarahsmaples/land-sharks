@@ -51,10 +51,15 @@
           <li class="bg-blue-600"><a href="{{ "/charter/" | url }}" class="nav-link"><span>Private Charter</span></a></li>
           <li class="bg-blue-500"><a href="{{ "/gallery/" | url }}" class="nav-link"><span>Gallery</span></a></li>
           <li class="bg-blue-400"><a href="{{ "/gift-cards/" | url }}" class="nav-link"><span>Gift Cards</span></a></li>
+          <li class="md:hidden bg-coral">
+            <a href="https://book.{{ client.bookingDomain }}.com/{{ client.rgPath }}/reservations/calendar" target="_blank" rel="noopener noreferrer" class="nav-link text-white font-bold" style="letter-spacing: 0.05em; text-transform: uppercase;">
+              <span>Book Now &rarr;</span>
+            </a>
+          </li>
         </ul>
 
-        <a href="https://book.{{ client.bookingDomain }}.com/{{ client.rgPath }}/reservations/calendar" target="_blank" rel="noopener noreferrer" class="hidden md:flex md:items-center shrink-0 px-5 py-2 bg-coral text-white font-bold text-sm hover:bg-coral-600 transition-colors shadow hover:shadow-md">
-          Book Now
+        <a href="https://book.{{ client.bookingDomain }}.com/{{ client.rgPath }}/reservations/calendar" target="_blank" rel="noopener noreferrer" class="hidden md:flex md:items-center self-center shrink-0 px-6 py-2 bg-coral text-white font-bold text-sm shadow transition-all duration-200 hover:bg-coral-600 hover:shadow-lg" style="border-radius: 99px 5px 99px 5px; letter-spacing: 0.05em; text-transform: uppercase; transform-origin: center;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+          Book Now &rarr;
         </a>
       </div>
 
