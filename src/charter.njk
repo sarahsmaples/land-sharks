@@ -78,15 +78,25 @@ keywords: Santa Barbara private charter tour, private amphibious tour, group tou
           </div>
 
           <!-- Leaf CTA -->
-          <div class="flex overflow-hidden w-full mt-10 fade-up" style="border-radius: 99px 5px 99px 5px; min-height: 200px;">
-            <div class="w-1/2 shrink-0 relative">
+          <div class="overflow-hidden w-full mt-10 fade-up" style="border-radius: 99px 5px 99px 5px;">
+            <!-- Mobile: full bleed image with overlay -->
+            <div class="relative lg:hidden" style="min-height: 200px;">
               <img src="{{ "/assets/images/boat-1.jpg" | url }}" alt="" class="absolute inset-0 w-full h-full object-cover">
+              <div class="absolute inset-0 bg-blue-600/80"></div>
+              <div class="relative z-10 flex flex-col items-center justify-center text-white text-center px-8 py-12 gap-4">
+                <p class="font-heading text-2xl leading-snug">Ready to request your charter?</p>
+                <a href="{{ "/" | url }}#contact" class="btn-primary">Get in Touch</a>
+              </div>
             </div>
-            <div class="w-1/2 bg-blue-600 flex flex-col items-center justify-center text-white text-center px-8 gap-4">
-              <p class="font-heading text-2xl lg:text-3xl leading-snug">Ready to request your charter?</p>
-              <a href="{{ "/" | url }}#contact" class="btn-primary">
-                Get in Touch
-              </a>
+            <!-- Desktop: image left, text right -->
+            <div class="hidden lg:flex" style="min-height: 200px;">
+              <div class="w-1/2 relative">
+                <img src="{{ "/assets/images/boat-1.jpg" | url }}" alt="" class="absolute inset-0 w-full h-full object-cover">
+              </div>
+              <div class="w-1/2 bg-blue-600 flex flex-col items-center justify-center text-white text-center px-8 gap-4">
+                <p class="font-heading text-3xl leading-snug">Ready to request your charter?</p>
+                <a href="{{ "/" | url }}#contact" class="btn-primary">Get in Touch</a>
+              </div>
             </div>
           </div>
 
