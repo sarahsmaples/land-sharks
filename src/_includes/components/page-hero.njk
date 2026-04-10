@@ -1,7 +1,7 @@
 <div class="relative text-white overflow-hidden">
 
   <!-- Background image -->
-  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{{ "/assets/images/santa-barbara.jpg" | url }}');"></div>
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{{ ("/assets/images/" + (heroImage if heroImage else "santa-barbara.jpg")) | url }}');"></div>
   <div class="absolute inset-0 bg-navy-900/55"></div>
 
   <div class="relative z-10 max-w-screen-xl mx-auto px-4 lg:px-6 py-28">
