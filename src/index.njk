@@ -16,7 +16,7 @@ keywords: Santa Barbara amphibious tours, Land Shark Tours, Santa Barbara whale 
   <section class="relative text-white overflow-hidden min-h-screen flex items-center">
     <!-- Ken Burns background -->
     <div class="hero-bg absolute inset-0 bg-cover bg-center" style="background-image: url('{{ "/assets/images/hero.jpg" | url }}')"></div>
-    <div class="absolute inset-0 bg-navy-900/55"></div>
+    <div class="absolute inset-0 bg-navy-900/35"></div>
 
     <div class="relative z-10 w-full px-4 lg:px-16 pt-24 lg:pt-0 pb-28">
       <div class="flex flex-col lg:flex-row items-center gap-12">
@@ -37,6 +37,12 @@ keywords: Santa Barbara amphibious tours, Land Shark Tours, Santa Barbara whale 
           </div>
         </div>
 
+        <!-- Mobile hero image -->
+        <div class="block lg:hidden w-full flex justify-center">
+          <img src="{{ "/assets/images/hero-mobile.png" | url }}" alt="Land Shark Tours amphibious vehicle in Santa Barbara" class="max-h-[40vh] w-auto object-contain drop-shadow-2xl">
+        </div>
+
+        <!-- Desktop collage -->
         <div class="hero-collage hidden lg:block lg:flex-1 flex justify-end">
           <img src="{{ "/assets/images/hero-collage.png" | url }}" alt="Land Shark Tours amphibious vehicle in Santa Barbara" class="max-h-[70vh] w-auto object-contain drop-shadow-2xl">
         </div>
@@ -56,40 +62,40 @@ keywords: Santa Barbara amphibious tours, Land Shark Tours, Santa Barbara whale 
     <div class="max-w-screen-xl mx-auto px-4 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center stagger-children">
 
-        <!-- Card 1 -->
-        <div class="leaf-card bg-coral">
+        <!-- Public Tours (mobile: 1st, desktop: 2nd) -->
+        <div class="leaf-card bg-coral lg:order-2">
           <div class="leaf-card-image">
             <img src="{{ "/assets/images/public_tours.jpg" | url }}" alt="Public Tours" class="w-full h-full object-cover">
           </div>
           <div class="leaf-card-body">
             <h3 class="font-heading text-2xl mb-3">Public Tours</h3>
-            <p class="text-base leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p class="text-base leading-relaxed">90 minutes of land, sea, and pure Santa Barbara magic. Join one of our scheduled tours and experience the city and harbor like never before.</p>
           </div>
           <a href="{{ "/public-tours/" | url }}" class="leaf-card-footer">Book a Tour</a>
         </div>
 
-        <!-- Card 2 -->
-        <div class="leaf-card bg-teal-700">
+        <!-- Departures (mobile: 2nd, desktop: 3rd) -->
+        <div class="leaf-card bg-blue-600 lg:order-3">
+          <div class="leaf-card-image">
+            <img src="{{ "/assets/images/public_tours.jpg" | url }}" alt="Departures" class="w-full h-full object-cover">
+          </div>
+          <div class="leaf-card-body">
+            <h3 class="font-heading text-2xl mb-3">Departures</h3>
+            <p class="text-base leading-relaxed">Tours depart from 99 West Cabrillo Blvd, Santa Barbara, CA 93101. Please arrive at least 15 minutes before your tour time.</p>
+          </div>
+          <a href="https://maps.app.goo.gl/4CB2W3KLr5J28GYb6" target="_blank" rel="noopener noreferrer" class="leaf-card-footer">Get Directions</a>
+        </div>
+
+        <!-- Private Charter (mobile: 3rd, desktop: 1st) -->
+        <div class="leaf-card bg-teal-700 lg:order-1">
           <div class="leaf-card-image">
             <img src="{{ "/assets/images/public_tours.jpg" | url }}" alt="Private Charter" class="w-full h-full object-cover">
           </div>
           <div class="leaf-card-body">
             <h3 class="font-heading text-2xl mb-3">Private Charter</h3>
-            <p class="text-base leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p class="text-base leading-relaxed">Have the whole boat to yourselves. Perfect for birthdays, corporate events, and celebrations — customized to your group and schedule.</p>
           </div>
           <a href="{{ "/charter/" | url }}" class="leaf-card-footer">Learn More</a>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="leaf-card bg-navy">
-          <div class="leaf-card-image">
-            <img src="{{ "/assets/images/public_tours.jpg" | url }}" alt="Gift Cards" class="w-full h-full object-cover">
-          </div>
-          <div class="leaf-card-body">
-            <h3 class="font-heading text-2xl mb-3">Gift Cards</h3>
-            <p class="text-base leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-          <a href="{{ "/gift-cards/" | url }}" class="leaf-card-footer">Buy a Gift Card</a>
         </div>
 
       </div>
@@ -105,7 +111,7 @@ keywords: Santa Barbara amphibious tours, Land Shark Tours, Santa Barbara whale 
           <h2 class="text-5xl lg:text-6xl font-heading text-navy mb-4">About Our Tours</h2>
           <p class="text-teal font-body font-semibold text-2xl mb-6">Santa Barbara's original amphibious tour — and still the best one.</p>
           <!-- Stat stamps -->
-          <div class="flex gap-4 mb-8 flex-nowrap">
+          <div class="flex gap-4 mb-8 flex-nowrap justify-center lg:justify-start">
             <div class="stat-stamp bg-coral text-white rotate-[-2deg]">
               <div class="stat-stamp-number">90</div>
               <div class="stat-stamp-label">Minutes of Fun</div>
@@ -116,7 +122,7 @@ keywords: Santa Barbara amphibious tours, Land Shark Tours, Santa Barbara whale 
             </div>
             <div class="stat-stamp bg-navy text-white rotate-[-1deg]">
               <div class="stat-stamp-number">#1</div>
-              <div class="stat-stamp-label">City &amp; Harbor Tour</div>
+              <div class="stat-stamp-label whitespace-nowrap">City &amp; Harbor Tour</div>
             </div>
           </div>
 

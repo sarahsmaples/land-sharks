@@ -30,16 +30,21 @@
 
       <!-- Mobile logo -->
       <a href="{{ "/" | url }}" class="flex items-center shrink-0 py-3 px-4 md:hidden">
-        <img src="{{ "/assets/images/logo-nav.png" | url }}" alt="{{ client.name }}" class="h-12 w-auto">
+        <img src="{{ "/assets/images/logo-nav.png" | url }}" alt="{{ client.name }}" class="h-20 w-auto">
       </a>
 
-      <!-- Mobile hamburger -->
-      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center self-center text-white rounded-lg md:hidden hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-teal shrink-0 mr-4" aria-controls="navbar-default" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
-      </button>
+      <!-- Mobile: Book Now + hamburger -->
+      <div class="flex items-center gap-2 shrink-0 pr-4 md:hidden">
+        <a href="https://book.{{ client.bookingDomain }}.com/{{ client.rgPath }}/reservations/calendar" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-coral text-white font-bold text-xs uppercase tracking-wide shadow" style="border-radius: 99px 5px 99px 5px;">
+          Book Now &rarr;
+        </a>
+        <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-white rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-teal" aria-controls="navbar-default" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+        </button>
+      </div>
 
       <!-- Nav links + CTA -->
       <div class="hidden w-full md:flex md:w-auto md:items-stretch md:justify-between md:flex-1" id="navbar-default">
@@ -50,12 +55,6 @@
           <li class="bg-blue-700"><a href="{{ "/faq/" | url }}" class="nav-link"><span>FAQ</span></a></li>
           <li class="bg-blue-600"><a href="{{ "/charter/" | url }}" class="nav-link"><span>Private Charter</span></a></li>
           <li class="bg-blue-500"><a href="{{ "/gallery/" | url }}" class="nav-link"><span>Gallery</span></a></li>
-          <li class="bg-blue-400"><a href="{{ "/gift-cards/" | url }}" class="nav-link"><span>Gift Cards</span></a></li>
-          <li class="md:hidden bg-coral">
-            <a href="https://book.{{ client.bookingDomain }}.com/{{ client.rgPath }}/reservations/calendar" target="_blank" rel="noopener noreferrer" class="nav-link text-white font-bold" style="letter-spacing: 0.05em; text-transform: uppercase;">
-              <span>Book Now &rarr;</span>
-            </a>
-          </li>
         </ul>
 
         <a href="https://book.{{ client.bookingDomain }}.com/{{ client.rgPath }}/reservations/calendar" target="_blank" rel="noopener noreferrer" class="hidden md:flex md:items-center self-center shrink-0 px-6 py-2 bg-coral text-white font-bold text-sm shadow transition-all duration-200 hover:bg-coral-600 hover:shadow-lg" style="border-radius: 99px 5px 99px 5px; letter-spacing: 0.05em; text-transform: uppercase; transform-origin: center;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
@@ -69,4 +68,4 @@
 </div>
 
 <!-- Spacer to prevent content from hiding behind fixed header -->
-<div class="h-[72px] md:h-[100px]"></div>
+<div class="h-[88px] md:h-[100px]"></div>
