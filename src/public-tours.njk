@@ -15,107 +15,57 @@ keywords: Santa Barbara public tours, Land Shark Tours tickets, Santa Barbara to
 
       <div class="flex flex-col lg:flex-row gap-10 items-start">
 
-        <!-- Left sidebar: leaf cards -->
+        <!-- Left sidebar -->
         <div class="hidden lg:flex flex-col gap-5 w-80 shrink-0">
 
-          <!-- Vessels card -->
-          <a href="{{ "/vessels/" | url }}" class="group flex overflow-hidden text-white bg-navy relative transition-all min-h-[160px]" style="border-radius: 25px 3px 99px 3px;">
-            <div class="shrink-0 w-40 overflow-hidden">
-              <img src="{{ "/assets/images/boat-1.jpg" | url }}" alt="" class="w-full h-full object-cover">
-            </div>
-            <div class="px-5 py-5">
-              <h3 class="font-heading text-xl mb-2">Our Vessels</h3>
-              <p class="text-sm leading-relaxed opacity-90">Meet the amphibious craft that takes you from street to sea.</p>
-            </div>
-            <div class="absolute inset-0 bg-navy-900 flex items-center justify-center -translate-x-full group-hover:translate-x-0 transition-transform duration-300">
-              <span class="font-heading text-2xl text-white">Learn More &rarr;</span>
-            </div>
-          </a>
-
-          <!-- FAQ card -->
-          <a href="{{ "/faq/" | url }}" class="group flex overflow-hidden text-white bg-teal relative transition-all min-h-[160px]" style="border-radius: 25px 3px 99px 3px;">
-            <div class="shrink-0 w-40 overflow-hidden">
-              <img src="{{ "/assets/images/santa-barbara.jpg" | url }}" alt="" class="w-full h-full object-cover">
-            </div>
-            <div class="px-5 py-5">
-              <h3 class="font-heading text-xl mb-2">FAQ</h3>
-              <p class="text-sm leading-relaxed opacity-90">Got questions? We've got answers about tickets, timing, and more.</p>
-            </div>
-            <div class="absolute inset-0 bg-navy-900 flex items-center justify-center -translate-x-full group-hover:translate-x-0 transition-transform duration-300">
-              <span class="font-heading text-2xl text-white">View FAQ &rarr;</span>
-            </div>
-          </a>
+          <!-- Ticket Prices -->
+          <div class="bg-blue-800 text-white rounded-2xl p-6">
+            <h2 class="font-heading text-2xl mb-4">Ticket Prices</h2>
+            <ul class="space-y-3 text-navy-100">
+              <li class="flex justify-between border-b border-white/10 pb-3">
+                <span>Adult</span><span class="font-bold text-coral-300">$45</span>
+              </li>
+              <li class="flex justify-between border-b border-white/10 pb-3">
+                <span>Children Under 10</span><span class="font-bold text-coral-300">$30</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Children Under 2 (on lap)</span><span class="font-bold text-teal-300">Free</span>
+              </li>
+            </ul>
+          </div>
 
         </div>
 
         <!-- Right: main content -->
         <div class="flex-1 min-w-0">
 
+          <h2 class="font-heading text-4xl lg:text-5xl text-navy mb-4">Land &amp; Sea Tours</h2>
           <div class="mb-10">
             <span class="inline-block bg-teal text-white font-bold text-sm uppercase tracking-widest px-5 py-2" style="border-radius: 79px 15px 79px 15px;">Voted Best City &amp; Harbor Tour — Top 10 Things to Do in California</span>
           </div>
 
-          <div class="grid gap-6 mb-10 md:grid-cols-3">
-
-            <!-- Ticket Prices -->
-            <div class="bg-navy-900 text-white rounded-2xl p-6">
-              <h2 class="font-heading text-2xl mb-4">Ticket Prices</h2>
-              <ul class="space-y-3 text-navy-100">
-                <li class="flex justify-between border-b border-white/10 pb-3">
-                  <span>Adult</span><span class="font-bold text-coral-300">$45</span>
-                </li>
-                <li class="flex justify-between border-b border-white/10 pb-3">
-                  <span>Children Under 10</span><span class="font-bold text-coral-300">$30</span>
-                </li>
-                <li class="flex justify-between">
-                  <span>Children Under 2 (on lap)</span><span class="font-bold text-teal-300">Free</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Schedule -->
-            <div class="bg-teal-50 border border-teal-100 rounded-2xl p-6">
-              <h2 class="font-heading text-2xl text-navy mb-4">Schedule</h2>
-              <p class="text-gray-600 mb-6">Click "View Calendar" to see available tour days and times.</p>
-              <a href="https://book.{{ client.bookingDomain }}.com/{{ client.rgPath }}/reservations/calendar" target="_blank" rel="noopener noreferrer" class="btn-teal">
-                View Calendar
-              </a>
-            </div>
-
-            <!-- Tour Departure -->
-            <div class="bg-navy-50 border border-navy-100 rounded-2xl p-6">
-              <h2 class="font-heading text-2xl text-navy mb-4">Tour Departure</h2>
-              <address class="not-italic text-gray-600 space-y-1">
-                <p>{{ client.address.street }}</p>
-                <p>{{ client.address.city }}, {{ client.address.state }} {{ client.address.zip }}</p>
-              </address>
-            </div>
-
-          </div>
-
-          <p class="mb-10 text-sm text-gray-500 italic">All tours are subject to cancellations. Some tour times may not be available. Passenger minimums may apply.</p>
 
           <div class="space-y-5 text-gray-600 text-lg leading-relaxed">
             <p>Start on land just west of Stearns Wharf, winding through Santa Barbara's historic streets — landmarks, architecture, and the stories behind the city that the world's rich and famous call home.</p>
             <p>Then we splash into the Pacific. Cruise past luxury yachts and fishing fleets, hear the maritime legends of Stearns Wharf, and keep your eyes open — sea lions, seals, dolphins, and even whales are regular guests.</p>
-
-            <!-- Horizontal leaf CTA -->
-            <div class="flex overflow-hidden w-full my-8" style="border-radius: 99px 5px 99px 5px; min-height: 200px;">
-              <div class="w-1/2 shrink-0 relative">
-                <img src="{{ "/assets/images/boat-1.jpg" | url }}" alt="" class="absolute inset-0 w-full h-full object-cover">
-              </div>
-              <div class="w-1/2 bg-blue-600 flex flex-col items-center justify-center text-white text-center px-8 gap-4">
-                <p class="font-heading text-2xl lg:text-3xl leading-snug">Ready for your Santa Barbara adventure?</p>
-                <a href="https://book.{{ client.bookingDomain }}.com/{{ client.rgPath }}/reservations/calendar" target="_blank" rel="noopener noreferrer" class="btn-primary">
-                  Book Now
-                </a>
-              </div>
-            </div>
-
             <p><strong>No paid endorsements. Ever.</strong> Our route is chosen entirely for your experience — no sponsored detours, no traffic-wasting pit stops, no restaurant recommendations we got paid to make. Just the best of Santa Barbara, unfiltered.</p>
             <div class="flex items-start gap-4 bg-navy-900 text-white rounded-2xl px-6 py-5 mt-2">
               <span class="text-teal text-2xl shrink-0">&#9432;</span>
-              <p class="text-lg leading-relaxed"><strong class="font-semibold">Good to know:</strong> We accept cash, Visa, Mastercard, and Amex. Plan to arrive at least 15 minutes before departure.</p>
+              <p class="text-base leading-relaxed">We accept cash, Visa, Mastercard, and Amex. Plan to arrive at least 15 minutes before departure.</p>
+            </div>
+            <p class="text-sm text-gray-500 italic">All tours are subject to cancellations. Some tour times may not be available. Passenger minimums may apply.</p>
+          </div>
+
+          <!-- Leaf CTA -->
+          <div class="flex overflow-hidden w-full mt-10" style="border-radius: 99px 5px 99px 5px; min-height: 200px;">
+            <div class="w-1/2 shrink-0 relative">
+              <img src="{{ "/assets/images/boat-1.jpg" | url }}" alt="" class="absolute inset-0 w-full h-full object-cover">
+            </div>
+            <div class="w-1/2 bg-blue-600 flex flex-col items-center justify-center text-white text-center px-8 gap-4">
+              <p class="font-heading text-2xl lg:text-3xl leading-snug">Ready for your Santa Barbara adventure?</p>
+              <a href="https://book.{{ client.bookingDomain }}.com/{{ client.rgPath }}/reservations/calendar" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                Book Now
+              </a>
             </div>
           </div>
 
